@@ -48,7 +48,17 @@ def reduce_to_total(source_array, starting_point=0)
   return new
 end
 
-
+def reduce_to_all_true(source_array)
+  i = 0
+  while i < source_array.length do
+    # stop enumerating and return false if any element is false
+    if source_array[i] == false
+      return false
+    end
+    i += 1
+  end
+  return true
+end
 
 
 
